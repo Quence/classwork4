@@ -19,12 +19,27 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
+  <script>
+    $(document).ready(function () {
+      $("#title").click(function () {
+        var div = $("#title");
+        div.animate({ height: '300px', opacity: '0.4' }, "slow");
+        div.animate({ width: '300px', opacity: '0.8' }, "slow");
+        div.animate({ height: '50%', opacity: '0.4' }, "slow");
+        div.animate({ width: '100%', opacity: '0.8' }, "slow");
+      });
+      $("#show").click(function () {
+        $(".code-block").fadeToggle();
+      });
+    });
+  </script>
   <p><i>Disclaimer: this is TSI University task for HTML, CSS and SASS workshop, not for publishing anywhere on the
       media. Please include this disclaimer</i></p>
   <div id="title">What is Sass? Your guide to this top CSS preprocessor</div>
@@ -70,6 +85,7 @@
     throughout your style sheet. For example, you can store a colour value in a variable at the top of the file, and
     then use this variable when setting the colour of your elements. This enables you to quickly change your colours
     without having to modify each line separately.</p>
+    <input type="button" value="Show/Hide Code" id="show"/>
   <h5>For example:</h5>
   <pre>
   <code class="code-block">
@@ -230,25 +246,25 @@
   <p><b>Tammy is an independent creative professional and the host of Roundabout: Creative Chaos. She’s also the owner
       of Just Write Code, an independent production company located in West Tennessee. For more information about
       Tammy, visit her website by clicking the icons above. </b></p>
-      <form>
-        <img id = "myImage" src = "img/arrow.jpeg" />
-        <p>Click button below to move the image to right</p>
-        <input type = "button" value = "Click Me" onclick = "moveRight();" />
-     </form>  
-    <div class="content">
-      <form class="subscription">
-        <input class="add-email" type="email" placeholder="subscribe@me.now">
-        <button class="submit-email" type="button">
-          <span class="before-submit">Subscribe</span>
-          <span class="after-submit">Thank you for subscribing!</span>
-        </button>
-      </form>
-    </div>
+  <form>
+    <img id="myImage" src="img/arrow.jpeg" />
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick="moveRight();" />
+  </form>
+  <div class="content">
+    <form class="subscription">
+      <input class="add-email" type="email" placeholder="subscribe@me.now">
+      <button class="submit-email" type="button">
+        <span class="before-submit">Subscribe</span>
+        <span class="after-submit">Thank you for subscribing!</span>
+      </button>
+    </form>
+  </div>
   <!-- <script>document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
       e.preventDefault();
       document.querySelector('.subscription').classList.add('done');
     });</script> -->
-    <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
