@@ -146,7 +146,7 @@
   <p>Used with Partials (see previous section), the @import directive allows you to import your partial files into the
     current file, to build one single CSS file. Be mindful of how many imports you're using as an HTTP request will be
     generated for each one.</p>
-    <pre>
+  <pre>
   <code class="code-block">// _reset.scss
   html,
   body,
@@ -184,7 +184,7 @@
       it. This is where mixins come in handy! </b></p>
   <p>For example, if you need to include the vendor prefixes, you can use a mixin instead. Take a look at this example
     for border-radius:</p>
-    <pre>
+  <pre>
   <code class="code-block">@mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -230,7 +230,25 @@
   <p><b>Tammy is an independent creative professional and the host of Roundabout: Creative Chaos. She’s also the owner
       of Just Write Code, an independent production company located in West Tennessee. For more information about
       Tammy, visit her website by clicking the icons above. </b></p>
-  <script src="js/scripts.js"></script>
+      <form>
+        <img id = "myImage" src = "img/arrow.jpeg" />
+        <p>Click button below to move the image to right</p>
+        <input type = "button" value = "Click Me" onclick = "moveRight();" />
+     </form>  
+    <div class="content">
+      <form class="subscription">
+        <input class="add-email" type="email" placeholder="subscribe@me.now">
+        <button class="submit-email" type="button">
+          <span class="before-submit">Subscribe</span>
+          <span class="after-submit">Thank you for subscribing!</span>
+        </button>
+      </form>
+    </div>
+  <!-- <script>document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      document.querySelector('.subscription').classList.add('done');
+    });</script> -->
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

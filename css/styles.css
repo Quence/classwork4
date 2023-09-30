@@ -1,40 +1,40 @@
 body {
-    background: #fff;
-    color: #2e3033;
-    /* left: 15%;
+  background: #fff;
+  color: #2e3033;
+  /* left: 15%;
     position: absolute;
     text-align: center;
     width: 70%; */
 }
 
 #title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    color: #b37399;
-    font-family: Liberation Sans;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: #b37399;
+  font-family: Liberation Sans;
 }
 
 #subtitle {
-    text-align: center;
-    font-size: 36px;
-    font-family: Liberation Sans;
+  text-align: center;
+  font-size: 36px;
+  font-family: Liberation Sans;
 }
 
 .code-block {
-    white-space: pre-wrap;
-    font-style: italic;
+  white-space: pre-wrap;
+  font-style: italic;
 }
 
 pre {
-    width: 30%;
-    background: gainsboro;
-    color: rgb(26, 53, 145);
-    padding: 5px 8px;
-    border-radius: 2px;
-    border-top: 4px solid #00aeef;
-    -moz-box-shadow: inset 0 0 10px #000;
-    box-shadow: inset 0 0 10px #000;
+  width: 30%;
+  background: gainsboro;
+  color: rgb(26, 53, 145);
+  padding: 5px 8px;
+  border-radius: 2px;
+  border-top: 4px solid #00aeef;
+  -moz-box-shadow: inset 0 0 10px #000;
+  box-shadow: inset 0 0 10px #000;
 }
 
 h1,
@@ -42,5 +42,86 @@ h2,
 h3,
 h4,
 h5 {
-    color: #036;
+  color: #036;
+}
+
+.content {
+
+  height: 40px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+  border-radius: 60px;
+  overflow: hidden;
+  margin: auto;
+  width: 50%;
+}
+
+.subscription {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.subscription .add-email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.subscription .submit-email {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100% - 2px);
+  width: 100px;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  margin: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+  background: #4ABEBB;
+  color: #FFFFFF;
+  transition: width .35s ease-in-out,
+    background .35s ease-in-out;
+}
+
+.subscription.done .submit-email {
+  width: calc(100% - 2px);
+  background: #C0E02E;
+}
+
+.subscription .submit-email .before-submit,
+.subscription .submit-email .after-submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 38px;
+  transition: visibility .35s ease-in-out,
+    opacity .35s ease-in-out;
+}
+
+.subscription.done .submit-email .before-submit,
+.subscription:not(.done) .submit-email .after-submit {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.subscription .submit-email .after-submit {
+  transition-delay: .35s;
+}
+
+.submit-email:hover {
+  background-color: darkorange;
+}
+#myImage{
+  width: 100px;
+  height: 100px;
 }
